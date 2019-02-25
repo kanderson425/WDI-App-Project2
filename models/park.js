@@ -10,8 +10,8 @@ var parkSchema = new mongoose.Schema({
     name: String,
     description: String,
     location: String,
-    photoURL: String,
-    amenities
+    photoURL: String ,
+    amenities: String
 
 }, {
 timestamps: true

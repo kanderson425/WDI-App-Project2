@@ -1,12 +1,28 @@
 body {
   padding: 20px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(160, 164, 130);
 }
 
 a {
-  color: #00B7FF;
+  color: black;
 }
 
 .nav {
   justify-content: flex-end;
+  background-color: #C0A66F;
+}
+
+.nav-item title {
+  justify-content: flex-start;
+}
+
+.home-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border: black solid 5px;
+  border-radius: 5%;
+
 }

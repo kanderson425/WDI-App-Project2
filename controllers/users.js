@@ -10,12 +10,12 @@ module.exports = {
 
 
 function index(req, res, next) { 
-
-    res.render('users/index', {
-        users,
+    console.log(req.query)
+    res.render('./index', {
+        // users,
         user: req.user,
         name: req.query.name,
-        sortKey
+        // sortKey
     });
 
 }
