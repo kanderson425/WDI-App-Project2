@@ -1,13 +1,19 @@
 <%- include('../partials/header') %>
 
-  <body>
+  <body class="allParks-body">
     <h1>All Parks Page</h1>
     <div class="parks-container">
-      <% for(var i = 0; i < parkData.data.length; i++) { %>
-        <div><%= parkData.data[i].fullName %></div>
-      <% } %>
-  
-        
+      <div class="row">
+          <% for(var i = 0; i < parkData.data.length; i++) { %>
+            <div class="park-image">
+              <div class="thumbnail">
+                <div class="image-title"><%= parkData.data[i].fullName %></div>
+                <img src="<%= parkData.data[i].images[0].url %>" width="300" height="200">
+                <a class="more-info-btn" href="../parkInfo/">More Info!</a>
+              </div>
+            </div>
+          <% } %>
+      </div>
     </div>
 
     <!-- Optional JavaScript -->

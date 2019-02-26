@@ -1,3 +1,27 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: NationalPark-Heavy; 
+  src: url(../fonts/NationalPark-Heavy.otf);
+}
+ @font-face {
+  font-family: NationalPark-Outline; 
+  src: url(../fonts/NationalPark-Outline.otf);
+} 
+@font-face {
+  font-family: NationalPark-Regular; 
+  src: url(../fonts/NationalPark-Regular.otf);
+}
+@font-face {
+  font-family: NationalPark-Thin; 
+  src: url(../fonts/NationalPark-Thin.otf);
+} 
+
+
 body {
   padding: 20px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -6,6 +30,8 @@ body {
 
 a {
   color: black;
+  font-family: NationalPark-Regular, sans-serif;
+  font-size: 20px;
 }
 
 .nav {
@@ -17,6 +43,12 @@ a {
   justify-content: flex-start;
 }
 
+/* Home Page */
+.home-page {
+  text-align: center;
+
+}
+
 .home-image {
   display: block;
   margin-left: auto;
@@ -25,9 +57,20 @@ a {
   height: 90%;
   border: black solid 5px;
   border-radius: 5%;
-
 }
 
+.home-page h1 {
+  font-family: NationalPark-Outline, sans-serif;
+}
+
+/* About Page */
+.about-page {
+  text-align: center;
+}
+
+.about-page h1 {
+  font-family: NationalPark-Outline, sans-serif;
+}
 .image-container {
   text-align:center;
 }
@@ -95,5 +138,65 @@ grid-gap: 10px;
   grid-area: parkContent6;
 } */
 
+/* AllParks Info Page */
+.allParks-body {
+  text-align: center;
+  font-family: NationalPark-Outline, sans-serif;
+}
 
-/* OnePark Info Page */
+.parks-container {
+  border: solid black 5px;
+  text-align: center;
+}
+
+.parks-container .row {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-left: auto;
+}
+
+.park-image{
+  background-repeat: no-repeat;
+  text-align: center;
+  position: relative;
+  margin: 5px 5px;
+}
+
+.park-image img {
+  /* width: 100%; */
+  /* height: auto; */
+  margin-bottom: 40px;
+  margin-left: auto;
+}
+.park-image .image-title {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  background-color: #C0A66F;
+  font-size: 15px;
+  font-family: NationalPark-Heavy, sans-serif;
+  width: 90%;
+}
+
+.park-image .more-info-btn {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+}
+
+.park-image .more-info-btn:hover {
+  background-color: black;
+}
