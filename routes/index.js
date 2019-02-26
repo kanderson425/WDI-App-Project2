@@ -11,9 +11,9 @@ router.get('/', usersCtrl.index);
 //   res.redirect('/parks');
 // })
 
-// about page route
-router.get('/about', function index(req, res, next) { 
-  res.render('../views/about', {
+// home page route
+router.get('/', function index(req, res, next) { 
+  res.render('../views/index', {
       // users,
       user: req.user,
       name: req.query.name,
@@ -21,9 +21,9 @@ router.get('/about', function index(req, res, next) {
   });
 });
 
-// view all national parks route
-router.get('/allParks', function index(req, res, next) { 
-  res.render('../views/parks/allParks', {
+// about page route
+router.get('/about', function index(req, res, next) { 
+  res.render('../views/about', {
       // users,
       user: req.user,
       name: req.query.name,

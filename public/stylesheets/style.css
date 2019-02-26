@@ -9,7 +9,7 @@ a {
 }
 
 .nav {
-  justify-content: flex-end;
+  justify-content: space-between;
   background-color: #C0A66F;
 }
 
@@ -21,8 +21,79 @@ a {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 90%;
+  height: 90%;
   border: black solid 5px;
   border-radius: 5%;
 
 }
+
+.image-container {
+  text-align:center;
+}
+.nps-logo-large {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* User Profile Page */
+.profile-body-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-auto-rows: minmax(100px, auto); */
+  grid-gap: 10px;
+  height: 100vh;
+
+}
+.user-info-container {
+background-color: peachpuff;
+display: grid;
+grid-template-columns: 1;
+grid-template-rows: 3fr 2fr 2fr 3fr;
+}
+
+.visited-parks-wrapper {
+background-color: peachpuff;
+border: solid black 5px;
+display: grid;
+grid-gap: 10px;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 6fr 6fr 6fr;
+grid-gap: 10px;
+/* grid-template-areas:
+"header"
+"parkContent1" "parkContent2"
+"parkContent3" "parkContent4"
+"parkContent5" "parkContent6" */
+}
+/* .main-head {
+  grid-area: header;
+}
+.visited-park1 {
+  grid-area: parkContent1;
+}
+
+.visited-park2 {
+  grid-area: parkContent2;
+}
+
+.visited-park3 {
+  grid-area: parkContent3;
+}
+
+.visited-park4 {
+  grid-area: parkContent4;
+}
+
+.visited-park5 {
+  grid-area: parkContent5;
+} */
+
+/* .visited-park6 {
+  grid-area: parkContent6;
+} */
+
+
+/* OnePark Info Page */

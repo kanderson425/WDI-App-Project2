@@ -7,16 +7,32 @@ var commentSchema = new mongoose.Schema({
 });
 
 var parkSchema = new mongoose.Schema({
-    name: String,
-    description: String,
-    location: String,
-    photoURL: String ,
-    amenities: String
-
+    name: {
+        type: String,
+        required: true
+    },
+    description: {
+        type: String,
+        required: true
+    },
+    location: {
+        type: String,
+        required: true
+    },
+    photoURL: {
+        type: String,
+        required: true
+    },
+    url: {
+        type: String
+    },
+    amenities: {
+        type: String
+    },
+    comment: [commentSchema]
 }, {
 timestamps: true
 });
-
 
 
 module.exports = mongoose.model('Park', parkSchema);
