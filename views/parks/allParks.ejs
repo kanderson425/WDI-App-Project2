@@ -3,7 +3,11 @@
   <body>
     <h1>All Parks Page</h1>
     <div class="parks-container">
-      <%= parkData.data[0].name %>
+      <% for(var i = 0; i < parkData.data.length; i++) { %>
+        <div><%= parkData.data[i].fullName %></div>
+      <% } %>
+  
+        
     </div>
 
     <!-- Optional JavaScript -->
