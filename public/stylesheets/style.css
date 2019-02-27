@@ -84,17 +84,26 @@ a {
 /* User Profile Page */
 .profile-body-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-columns: 1fr 2fr;
   /* grid-auto-rows: minmax(100px, auto); */
   grid-gap: 10px;
   height: 100vh;
 
 }
 .user-info-container {
-background-color: peachpuff;
+background-color: #BF5424;
 display: grid;
 grid-template-columns: 1;
-grid-template-rows: 3fr 2fr 2fr 3fr;
+grid-template-rows: 40px 310px 1fr 3fr;
+text-align: center;
+font-family: NationalPark-Regular, sans-serif;
+}
+
+.img-profile {
+  border-radius: 50%;
+  width: 300px;
+
 }
 
 .visited-parks-wrapper {
@@ -168,6 +177,7 @@ grid-gap: 10px;
   /* height: auto; */
   margin-bottom: 40px;
   margin-left: auto;
+  margin-right: auto;
 }
 .park-image .image-title {
   position: absolute;

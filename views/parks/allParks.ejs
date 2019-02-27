@@ -9,7 +9,7 @@
               <div class="thumbnail">
                 <div class="image-title"><%= parkData.data[i].fullName %></div>
                 <img src="<%= parkData.data[i].images[0].url %>" width="300" height="200">
-                <a class="more-info-btn" href="../parkInfo/">More Info!</a>
+                <a class="more-info-btn" href="./allParks/<%= parkData.data[i].parkCode %>">More Info!</a>
               </div>
             </div>
           <% } %>

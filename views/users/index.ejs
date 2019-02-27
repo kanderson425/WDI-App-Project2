@@ -1,12 +1,14 @@
 <%- include('../partials/header') %>
 
   <body>
-    <h1>Profile Page</h1>
     <div class="profile-body-container">
       <div class="user-info-container">
-        <h3>Insert Profile Pic</h3>
-        <p>Bio</p>
-        <p>Stats</p>
+        <h3><%= user.name %></h3>
+        <img class="img-profile" width="300" src='<%= user.avatar %>'>
+        <p>
+          Email: <%= user.email %><br>
+          Stats: <%= user.googleId %>
+        </p>
         <p>Wish List</p>
       </div>
       <div class="visited-parks-wrapper">

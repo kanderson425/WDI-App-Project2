@@ -2,15 +2,12 @@ const User = require('../models/user');
 const Park = require('../models/park');
 
 module.exports = {
-    index,
-    addPark,
-    delPark
+    userDetails
+
 };
 
-
-
-function index(req, res, next) { 
-    console.log(req.query)
+function userDetails(req, res, next) { 
+    console.log(req.user)
     res.render('./index', {
         // users,
         user: req.user,
@@ -18,13 +15,5 @@ function index(req, res, next) {
         // sortKey
     });
 
-}
-
-function addPark(req, res, next) {
-
-}
-
-function delPark(req, res, next) {
-    
 }
 

@@ -6,7 +6,7 @@ var usersCtrl = require('../controllers/users');
 
 
 // The root route renders our only view
-router.get('/', usersCtrl.index);
+router.get('/', usersCtrl.userDetails);
 // router.get('/parks', function(req, res) {
 //   res.redirect('/parks');
 // })

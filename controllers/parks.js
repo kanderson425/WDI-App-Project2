@@ -38,12 +38,34 @@ function getAllParks(req, res, next) {
         //sortKey
         parkData: parkData
       });
-      // console.log(parkData.data);
+      // console.log(parkData.data[0].url);
   });
 }
 
 function getOnePark(req, res) {
-    Park.findById(req.params.id).then(function(park) {
-        res.redirect('/parkInfo');
+  var options = { method: 'GET',
+  url: 'https://developer.nps.gov/api/v1/parks',
+  qs: 
+   { api_key: 'TnCegm5LiZi6JnDHecKG7ZoMwrIKhMpKzfoeekPZ',
+     fields: 'fullName,images,states,description,url,designation', 
+     q: 'National%Park' },
+  headers: 
+   { 'Postman-Token': 'd0adc330-b040-4d99-bc79-fec9fdd73c97',
+
+     'Content-Type': 'application/json' } };
+
+  request(options, function(err, response, body) {
+    var parkData = JSON.parse(body);
+    var data = JSON.parse(body).data;
+    var filteredData = data.filter(park => {
+      return park.parkCode === req.params.id
+    }) 
+    console.log(filteredData[0]);
+        // res.send("This will be the show page for a single park!");
+    res.render('./parks/parkInfo', {
+      user: req.user,
+      name: req.query.name,
+      filteredData
     });
-}
+  });   
+}    
