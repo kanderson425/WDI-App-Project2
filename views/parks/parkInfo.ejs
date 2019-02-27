@@ -5,9 +5,9 @@
     <div class="onepark-body-container">
         <div class="onepark-info-container">
           <h3>Insert Park Pic</h3>
-          <img src="<%= filteredData %>" width="300" height="200">
+          <img src="<%= filteredData[0].images[0].url %>" width="300" height="200">
           <p>Background</p>
-          <p>Location</p>
+          <p><%= filteredData[0].states %></p>
           <p>Operating Hours</p>
           <p>Amenities</p>
         </div>
