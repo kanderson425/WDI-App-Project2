@@ -1,20 +1,32 @@
 <%- include('../partials/header') %>
 
   <body>
-    <h1>Individual Park Page</h1>
+    <h1><%= filteredData[0].fullName %></h1>
     <div class="onepark-body-container">
         <div class="onepark-info-container">
-          <h3>Insert Park Pic</h3>
-          <img src="<%= filteredData[0].images[0].url %>" width="300" height="200">
-          <p>Background</p>
-          <p><%= filteredData[0].states %></p>
-          <p>Operating Hours</p>
-          <p>Amenities</p>
+          <img class="park-img" src="<%= filteredData[0].images[0].url %>" width="300" height="200">
+          <div class="park-info">
+            <p>Description: <%= filteredData[0].description %></p>
+            <p>Location: <%= filteredData[0].states %></p>
+            <p>Operating Hours:</p>
+            <p>Amenities:</p>
+          </div>
+          <div class="park-wishlist">
+            <p>Wishlist</p>
+          </div>
         </div>
         <div class="onepark-comments-wrapper">
-          <h3 class="onepark-comments-main-head">Visitor Comments</h3>
-          <div class="visited-park2">
-            <p>Second Park</p>
+          <div class="onepark-comments-main-head">
+            <h3>Visitor Comments</h3>
+          </div>
+          <div class="individ-comments-wrapper">
+            <p>Kyle A. :THIS IS A TEST COMMENT</p>
+          </div>
+          <div class="individ-comments-wrapper">
+            <p>Michelle M.: THIS IS A TEST COMMENT</p>
+          </div>
+          <div class="individ-comments-wrapper">
+            <p>Andrew C.: THIS IS A TEST COMMENT</p>
           </div>
         </div>
       </div>
