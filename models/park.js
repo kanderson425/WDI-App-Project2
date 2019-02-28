@@ -18,7 +18,7 @@ var parkSchema = new mongoose.Schema({
     },
     location: {
         type: String,
-        required: true
+        // required: true
     },
     photoURL: {
         type: String,
@@ -30,7 +30,7 @@ var parkSchema = new mongoose.Schema({
     amenities: {
         type: String
     },
-    comment: [commentSchema]
+    // comment: [commentSchema]
 }, {
 timestamps: true
 });

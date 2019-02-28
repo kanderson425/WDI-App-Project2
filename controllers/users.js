@@ -10,7 +10,7 @@ function userDetails(req, res, next) {
         res.render('./index', {
             // users,
             user: req.user,
-            name: req.query.name
+            name: req.query.name,
             // sortKey
         });
         // console.log(user);

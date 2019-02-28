@@ -7,13 +7,16 @@ module.exports = {
    getOnePark,
    createPark,
    visitedPark,
-  //  wishedPark
+   wishedPark,
+   deletePark
 };
 
 function createPark(req, res) {
-    Park.create(req.body).then(function(park) {
-        req.user.parksVisited.push(req.body);
-    })
+  console.log(req.body, '34567890-')
+    // Park.create(req.body)
+    // .then(function(park) {
+    //     req.user.parksVisited.push(req.body);
+    // })
 }
 
 function getAllParks(req, res, next) {
@@ -79,26 +82,51 @@ function getOnePark(req, res) {
 }    
 
 function visitedPark(req, res) {
-        req.user.parksVisited.push(req.body);
-        res.render('./users/index', {
-          user: req.user,
-          name: req.query.name,
-        });
-        console.log(req.user.parksVisited);
-        // console.log(req.body.name);
+  // console.log(req.body, '12312412414')
+  let newPark = Park.create(req.body);
+
+  newPark.then((item) => {
+    // console.log(req.user, 5678908765456789)
+    req.user.parksVisited.push(item);
+    req.user.save();
+    console.log(req.user);
+    res.redirect('/users/index');
+  }).catch((err) => {
+    console.log(err);
+  })
 }  
 
-// function wishedPark(req, res) {
-//   // console.log(req.body, '1234567890');
-//       // req.user.parksVisited.push(req.body);
-//       // Park.create(req.body).then(function(park) {
-//         req.user.parksWished.push(req.body);
-//       // });
-//         res.render('./users/index', {
-//           user: req.user,
-//           name: req.query.name,
-//           // parksVisited: req.user.parksVisited
-//         });
-//       console.log(req.user.parksWished[0].name);
-//     // }); 
-// }   
+function wishedPark(req, res) {
+  // console.log(req.body, '12312412414')
+  let newPark = Park.create(req.body);
+
+  newPark.then((item) => {
+    // console.log(req.user, 5678908765456789)
+    req.user.parksWished.push(item);
+    req.user.save();
+    console.log(req.user);
+    res.redirect('/users/index');
+  }).catch((err) => {
+    console.log(err);
+  })
+}  
+  
+
+function deletePark(req, res) {
+    req.user.parksVisited.map( (park, idx) => {
+      // console.log(park._id);
+      if (park._id.toString() === req.params.id) {
+        console.log("found park", park._id);
+        console.log(req.params.id, "req.params.id");
+        req.user.parksVisited.splice(idx, 1)
+      }
+    }); 
+
+    req.user.save();
+    // console.log("Attempt to remove");
+    // console.log(req.params.id);
+    res.redirect('/users/index');
+    // console.log(req.user.parksVisited[req.params.id]);
+    // console.log(req.user.parksVisited)
+    // req.user.parksVisited.splice(parseInt(req.params.id));
+};

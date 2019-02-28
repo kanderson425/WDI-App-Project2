@@ -33,10 +33,13 @@ router.get('/about', function index(req, res, next) {
 
 // view user profile page route
 router.get('/users/index', function index(req, res, next) { 
+  // console.log(req.user)
   res.render('../views/users/index', {
       // users,
       user: req.user,
       name: req.query.name,
+      parksVisited: req.user.parksVisited,
+      parksWished: req.user.parksWished
       // sortKey
   });
 });

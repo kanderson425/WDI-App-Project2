@@ -7,19 +7,36 @@
         <h3><%= user.name %></h3>
         <img class="img-profile" width="300" src='<%= user.avatar %>'>
         <p>
-          Email: <%= user.email %><br>
-          Stats: <%= user.googleId %>
+          Email - <%= user.email %><br>
+          Stats - <%= user.googleId %><br>
+          Bio - I lie long walks on the beach!
         </p>
       </div>
       <div class="visited-parks-wrapper">
-        <h3 class="main-head">Parks I have Visited</h3>
-        <p><%= user.parksVisited[0].name %></p>
-        <p><%= user.parksVisited[0].description %></p>
+        <h3 class="visited-main-head">Parks I have Visited</h3>
+        <% parksVisited.forEach(function(v) { %>
+          <div class="park-card-wrapper">
+            <form action="/users/index/<%= v._id %>?_method=DELETE"
+              class="delete-form" method="POST">
+              <button class="delete-form-button" type="submit">X</button>
+            </form>
+            <%= v.name %>
+            <div class="card-img-wrapper">
+                <img src='<%= v.photoURL %>' alt='card image wrapper'>
+            </div>
+        
+          </div>
+        <% }); %> 
       </div>
 
       <div class="wished-parks-wrapper">
-          <h3 class="main-head">Wish List</h3>
-     
+        <h3 class="wished-main-head">Wish List</h3>
+        <% parksWished.forEach(function(w) { %>
+          <div class="park-card-wrapper">
+            <%= w.name %>
+            <%= w.description %>
+          </div>
+        <% }); %> 
       </div>
 
 

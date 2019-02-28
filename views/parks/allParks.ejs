@@ -13,13 +13,21 @@
                 <form method="POST" action="/users/index">
                   <input type="hidden"  name="name" value="<%= parkData.data[i].fullName %>">
                   <input type="hidden"  name="description" value="<%= parkData.data[i].description %>">
+                  <input type="hidden"  name="location" value="<%= parkData.data[i].location %>">
                   <input type="hidden"  name="photoURL" value="<%= parkData.data[i].images[0].url %>">
+                  <input type="hidden"  name="url" value="<%= parkData.data[i].url %>">
+                  <input type="hidden"  name="amenities" value="<%= parkData.data[i].amenities %>">
+                  <input type="hidden"  name="comment" value="<%= parkData.data[i].comment %>">
                   <button type='submit' class="add-visited-park-btn" >Visited List</button>
                 </form>
                 <form method="POST" action="/users/index">
                   <input type="hidden"  name="name" value="<%= parkData.data[i].fullName %>">
                   <input type="hidden"  name="description" value="<%= parkData.data[i].description %>">
+                  <input type="hidden"  name="location" value="<%= parkData.data[i].location %>">
                   <input type="hidden"  name="photoURL" value="<%= parkData.data[i].images[0].url %>">
+                  <input type="hidden"  name="url" value="<%= parkData.data[i].url %>">
+                  <input type="hidden"  name="amenities" value="<%= parkData.data[i].amenities %>">
+                  <input type="hidden"  name="comment" value="<%= parkData.data[i].comment %>">
                   <button type='submit' class="add-wish-park-btn" >Wish List</button>
                 </form>
               </div>
