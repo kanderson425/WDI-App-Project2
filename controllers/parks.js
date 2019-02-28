@@ -26,7 +26,8 @@ function getAllParks(req, res, next) {
       var options = { method: 'GET',
       url: 'https://developer.nps.gov/api/v1/parks',
       qs: 
-      { api_key: 'TnCegm5LiZi6JnDHecKG7ZoMwrIKhMpKzfoeekPZ',
+      { limit: '116',
+        api_key: 'TnCegm5LiZi6JnDHecKG7ZoMwrIKhMpKzfoeekPZ',
         fields: 'fullName,images,states,description,url,designation', 
         q: 'National%Park' },
       headers: 
@@ -57,7 +58,8 @@ function getOnePark(req, res) {
     var options = { method: 'GET',
     url: 'https://developer.nps.gov/api/v1/parks',
     qs: 
-    { api_key: 'TnCegm5LiZi6JnDHecKG7ZoMwrIKhMpKzfoeekPZ',
+    { limit: '116',
+      api_key: 'TnCegm5LiZi6JnDHecKG7ZoMwrIKhMpKzfoeekPZ',
       fields: 'fullName,images,states,description,url,designation', 
       q: 'National%Park' },
     headers: 
@@ -90,7 +92,8 @@ function visitedPark(req, res) {
     var options = { method: 'GET',
     url: 'https://developer.nps.gov/api/v1/parks',
     qs: 
-    { api_key: 'TnCegm5LiZi6JnDHecKG7ZoMwrIKhMpKzfoeekPZ',
+    { limit: '116',
+      api_key: 'TnCegm5LiZi6JnDHecKG7ZoMwrIKhMpKzfoeekPZ',
       fields: 'fullName,images,states,description,url,designation', 
       q: 'National%Park' },
     headers: 
@@ -123,7 +126,8 @@ function wishedPark(req, res) {
     var options = { method: 'GET',
     url: 'https://developer.nps.gov/api/v1/parks',
     qs: 
-    { api_key: 'TnCegm5LiZi6JnDHecKG7ZoMwrIKhMpKzfoeekPZ',
+    { limit: '116',
+      api_key: 'TnCegm5LiZi6JnDHecKG7ZoMwrIKhMpKzfoeekPZ',
       fields: 'fullName,images,states,description,url,designation', 
       q: 'National%Park' },
     headers: 
