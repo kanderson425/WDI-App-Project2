@@ -6,17 +6,14 @@ module.exports = {
 };
 
 function userDetails(req, res, next) { 
-    console.log(req.user)
-    // var username = req.body.username || req.query.username;
-    // if(!username) {
-    //     return res.render('error', {userData: null})
-    // } else {
+    // console.log(req.user)
         res.render('./index', {
             // users,
             user: req.user,
-            name: req.query.name,
+            name: req.query.name
             // sortKey
         });
+        console.log(user);
     // }    
 }
 

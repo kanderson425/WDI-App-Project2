@@ -1,11 +1,19 @@
 <%- include('./partials/header') %>
 
   <body class="home-page">
-    <h1>National Park Tracker</h1>
+    <% if (user) { %> 
+    <h1>Greetings <%= user.name %></h1>
     <div class="picture">
         <img class="home-image" src="./images/Grand_Canyon_Photo.jpg" alt="Grand Canyon Photo" >
     </div>
-
+    <h1>Welcome to your National Park Tracker</h1>
+    <% } else { %>
+      <h1>Greetings traveler!</h1>
+      <div class="picture">
+          <img class="home-image" src="./images/Grand_Canyon_Photo.jpg" alt="Grand Canyon Photo" >
+      </div>
+      <h1>Welcome to the National Park Tracker App</h1>
+    <% } %>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
