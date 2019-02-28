@@ -1,5 +1,6 @@
 <%- include('../partials/header') %>
 
+<% if (user) { %>
   <body>
     <div class="profile-body-container">
       <div class="user-info-container">
@@ -14,26 +15,17 @@
       <div class="visited-parks-wrapper">
         <h3 class="main-head">Parks I have Visited</h3>
         <h3 class="main-head">Parks I have Visited</h3>
-        <div class="visited-park1">
-          <p>First Park</p>
-        </div>
-        <div class="visited-park2">
-          <p>Second Park</p>
-        </div>
-        <div class="visited-park3">
-            <p>Third Park</p>
-          </div>
-          <div class="visited-park4">
-            <p>Fourth Park</p>
-          </div>
-          <div class="visited-park5">
-            <p>Fifth Park</p>
-          </div>
-          <div class="visited-park6">
-            <p>Sixth Park</p>
-          </div>
+  
+      
       </div>
     </div>
+
+    <% } else { %>
+      <div class="error-container">
+        <h3 class="error-title">Please Login to access profile!</h3>
+        <img class="nps-logo-large" src="../images/NPS_Logo_Hi_Res.png" alt="NPS Logo">
+    </div>
+    <% } %>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

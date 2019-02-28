@@ -14,4 +14,7 @@ function isLoggedIn(req, res, next) {
   res.redirect('/auth/google');
 }
 
+// router.post('/', usersCtrl.visitedParks);
+// router.post('/', usersCtrl.wishedParks);
+
 module.exports = router;

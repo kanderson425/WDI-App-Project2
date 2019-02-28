@@ -99,7 +99,8 @@ a {
 background-color: #BF5424;
 display: grid;
 grid-template-columns: 1;
-grid-template-rows: 40px 310px 1fr 3fr;
+grid-template-rows: 10% 30% 20% 40%;
+/* grid-template-rows: 40px 310px 1fr 3fr; */
 text-align: center;
 font-family: NationalPark-Regular, sans-serif;
 }
@@ -151,6 +152,19 @@ grid-gap: 10px;
   grid-area: parkContent6;
 } */
 
+.error-title {
+  font-family: NationalPark-Outline, Sans-serif;
+  font-size: 40px;
+}
+
+.error-image {
+  
+}
+
+.error-container {
+  text-align: center;
+}
+
 /* AllParks Info Page */
 .allParks-body {
   text-align: center;
@@ -167,6 +181,7 @@ grid-gap: 10px;
   flex-wrap: wrap;
   position: relative;
   margin-left: auto;
+  margin-right: auto;
 }
 
 .park-image{
@@ -177,15 +192,15 @@ grid-gap: 10px;
 }
 
 .park-image img {
-  /* width: 100%; */
+  /* width: 50%; */
   /* height: auto; */
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
 }
 .park-image .image-title {
   position: absolute;
-  top: 5%;
+  top: 4%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: black;
@@ -198,13 +213,13 @@ grid-gap: 10px;
 .park-image .more-info-btn {
   position: absolute;
   top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  left: 0%;
+  /* transform: translate(-25%, -25%);
+  -ms-transform: translate(-25%, -25%); */
   background-color: #555;
   color: white;
-  font-size: 16px;
-  padding: 12px 24px;
+  font-size: 14px;
+  padding: 3px 10px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -212,6 +227,46 @@ grid-gap: 10px;
 }
 
 .park-image .more-info-btn:hover {
+  background-color: black;
+}
+
+.park-image .add-visited-park-btn {
+  position: absolute;
+  top: 80%;
+  left: 35%;
+  /* transform: translate(25%, 25%);
+  -ms-transform: translate(25%, 25%); */
+  background-color: #555;
+  color: white;
+  font-size: 14px;
+  padding: 3px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+}
+
+.park-image .add-visited-park-btn:hover {
+  background-color: black;
+}
+
+.park-image .add-wish-park-btn {
+  position: absolute;
+  top: 80%;
+  right: 0%;
+  /* transform: translate(25%, 25%);
+  -ms-transform: translate(25%, 25%); */
+  background-color: #555;
+  color: white;
+  font-size: 14px;
+  padding: 3px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+}
+
+.park-image .add-wish-park-btn:hover {
   background-color: black;
 }
 
@@ -246,11 +301,6 @@ font-family: NationalPark-Regular, sans-serif;
 .park-info {
   margin: 10px 5px;
   text-align: left;
-}
-
-.park-wishlist {
-  text-align: left;
-  margin: 10px 5px;
 }
 
 .onepark-comments-wrapper {

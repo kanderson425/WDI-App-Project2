@@ -7,7 +7,7 @@ var logger = require('morgan');
 var session = require('express-session');
 var passport = require('passport');
 var bodyParser = require('body-parser');
-// var methodOverride = require('method-override');
+var methodOverride = require('method-override');
 
 // load the env vars
 require('dotenv').config();
@@ -21,9 +21,10 @@ require('./config/database');
 require('./config/passport');
 
 //require our routes
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
 const apiRouter = require('./routes/api');
+const commentsRouter = require('./routes/comments');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -43,10 +44,12 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser());
+app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/', apiRouter);
+app.use('/allParks', commentsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
