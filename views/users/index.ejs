@@ -10,20 +10,24 @@
           Email: <%= user.email %><br>
           Stats: <%= user.googleId %>
         </p>
-        <p>Wish List</p>
       </div>
       <div class="visited-parks-wrapper">
         <h3 class="main-head">Parks I have Visited</h3>
-        <h3 class="main-head">Parks I have Visited</h3>
-  
-      
+        <p><%= user.parksVisited[0].name %></p>
+        <p><%= user.parksVisited[0].description %></p>
       </div>
-    </div>
+
+      <div class="wished-parks-wrapper">
+          <h3 class="main-head">Wish List</h3>
+     
+      </div>
+
 
     <% } else { %>
       <div class="error-container">
-        <h3 class="error-title">Please Login to access profile!</h3>
+        <h3 class="error-title">Please login to access your  profile!</h3>
         <img class="nps-logo-large" src="../images/NPS_Logo_Hi_Res.png" alt="NPS Logo">
+        <h2 class="error-title">Once logged in you will be able to access your lists!</h2>
     </div>
     <% } %>
 

@@ -6,14 +6,14 @@ module.exports = {
 };
 
 function userDetails(req, res, next) { 
-    // console.log(req.user)
+    console.log(req.user);
         res.render('./index', {
             // users,
             user: req.user,
             name: req.query.name
             // sortKey
         });
-        console.log(user);
+        // console.log(user);
     // }    
 }
 

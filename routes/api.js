@@ -5,8 +5,8 @@ const parksCtrl = require('../controllers/parks');
 
 router.get('/allParks', parksCtrl.getAllParks);
 router.get('/allParks/:id', parksCtrl.getOnePark);
-router.post('/', parksCtrl.visitedPark);
-router.post('/', parksCtrl.wishedPark);
+router.post('/users/index', parksCtrl.visitedPark);
+// router.post('/users/index', parksCtrl.wishedPark);
 
 
 module.exports = router;

@@ -89,6 +89,7 @@ a {
   text-align: center;
   position: relative;
   height: 80%;
+
   /* background: url(../images/Zion_River_photo.jpg) no-repeat center center fixed;  */
 }
 
@@ -115,16 +116,15 @@ a {
 /* User Profile Page */
 .profile-body-container {
   display: grid;
-  /* grid-template-columns: repeat(2, 1fr); */
   grid-template-columns: 1fr 2fr;
-  /* grid-auto-rows: minmax(100px, auto); */
+  grid-template-rows: 4fr 2fr;
   grid-gap: 10px;
   height: 100vh;
 
 }
 .user-info-container {
 background-color: #BF5424;
-display: grid;
+/* display: grid; */
 grid-template-columns: 1;
 grid-template-rows: 10% 30% 20% 40%;
 /* grid-template-rows: 40px 310px 1fr 3fr; */
@@ -139,45 +139,27 @@ font-family: NationalPark-Regular, sans-serif;
 }
 
 .visited-parks-wrapper {
-background-color: peachpuff;
-border: solid black 5px;
-display: grid;
-grid-gap: 10px;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: 1fr 6fr 6fr 6fr;
-grid-gap: 10px;
-/* grid-template-areas:
-"header"
-"parkContent1" "parkContent2"
-"parkContent3" "parkContent4"
-"parkContent5" "parkContent6" */
-}
-/* .main-head {
-  grid-area: header;
-}
-.visited-park1 {
-  grid-area: parkContent1;
+  background-color: peachpuff;
+  border: solid black 5px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
 }
 
-.visited-park2 {
-  grid-area: parkContent2;
+.wished-parks-wrapper {
+  background-color: peachpuff;
+  border: solid black 5px;
+  grid-gap: 10px;
+  grid-column: 1 / 3;
+  grid-template-rows: 1fr; 
+  grid-gap: 10px;
+  clear: both;
+
+
+
 }
-
-.visited-park3 {
-  grid-area: parkContent3;
-}
-
-.visited-park4 {
-  grid-area: parkContent4;
-}
-
-.visited-park5 {
-  grid-area: parkContent5;
-} */
-
-/* .visited-park6 {
-  grid-area: parkContent6;
-} */
 
 .error-title {
   font-family: NationalPark-Outline, Sans-serif;
@@ -200,6 +182,7 @@ grid-gap: 10px;
 
 .parks-container {
   border: solid black 5px;
+  border-radius: 5px;
   text-align: center;
 }
 
