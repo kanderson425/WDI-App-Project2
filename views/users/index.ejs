@@ -19,7 +19,7 @@
             <div class="card-img-wrapper">
                 <img src='<%= v.photoURL %>' alt='card image wrapper'>
             </div>
-            <form action="/users/index/<%= v._id %>?_method=DELETE"
+            <form action="/users/index/<%= v._id %>/deleteVisitedPark?_method=DELETE"
               class="delete-form" method="POST">
               <button class="delete-form-button" type="submit">Remove</button>
             </form>
@@ -36,7 +36,7 @@
             <div class="card-img-wrapper">
                 <img src='<%= w.photoURL %>' alt='card image wrapper'>
             </div>
-            <form action="/users/index/<%= w._id %>?_method=DELETE"
+            <form action="/users/index/<%= w._id %>/deleteWishedPark?_method=DELETE"
               class="delete-form" method="POST">
               <button class="delete-form-button" type="submit">Remove</button>
             </form>
