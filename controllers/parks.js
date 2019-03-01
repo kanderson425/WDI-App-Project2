@@ -82,24 +82,26 @@ function getOnePark(req, res) {
 }    
 
 function visitedPark(req, res) {
-  // console.log(req.body, '12312412414')
-  let newPark = Park.create(req.body);
+  // if (req.user) {
+    let newPark = Park.create(req.body);
 
-  newPark.then((item) => {
-    // console.log(req.user, 5678908765456789)
-    req.user.parksVisited.push(item);
-    req.user.save();
-    console.log(req.user);
-    res.redirect('/users/index');
-  }).catch((err) => {
-    console.log(err);
-  })
+    newPark.then((item) => {
+      // console.log(req.user, 5678908765456789)
+      req.user.parksVisited.push(item);
+      req.user.save();
+      console.log(req.user);
+      res.redirect('/users/index');
+    }).catch((err) => {
+      console.log(err);
+    })
+  // } else {
+  //   res.redirect('views/errorPage');
+  // }
 }  
 
 function wishedPark(req, res) {
-  // console.log(req.body, '12312412414')
+  // console.log("The wish list button is working");
   let newPark = Park.create(req.body);
-
   newPark.then((item) => {
     // console.log(req.user, 5678908765456789)
     req.user.parksWished.push(item);
@@ -109,7 +111,7 @@ function wishedPark(req, res) {
   }).catch((err) => {
     console.log(err);
   })
-}  
+}   
   
 
 function deletePark(req, res) {

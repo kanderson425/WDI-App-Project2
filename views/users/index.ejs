@@ -33,20 +33,23 @@
         <h3 class="wished-main-head">Wish List</h3>
         <% parksWished.forEach(function(w) { %>
           <div class="park-card-wrapper">
+              <form action="/users/index/<%= w._id %>?_method=DELETE"
+                class="delete-form" method="POST">
+                <button class="delete-form-button" type="submit">X</button>
+              </form>
             <%= w.name %>
             <%= w.description %>
           </div>
         <% }); %> 
       </div>
 
-
-    <% } else { %>
-      <div class="error-container">
-        <h3 class="error-title">Please login to access your  profile!</h3>
-        <img class="nps-logo-large" src="../images/NPS_Logo_Hi_Res.png" alt="NPS Logo">
-        <h2 class="error-title">Once logged in you will be able to access your lists!</h2>
-    </div>
-    <% } %>
+<% } else { %>
+  <div class="error-container">
+    <h3 class="error-title">Please login to access your  profile!</h3>
+    <img class="nps-logo-large" src="../images/NPS_Logo_Hi_Res.png" alt="NPS Logo">
+    <h2 class="error-title">Once logged in you will be able to access your lists!</h2>
+</div>
+<% } %>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
