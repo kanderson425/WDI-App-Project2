@@ -34,6 +34,8 @@ There are currently 4 views that a user can access: Home, About, View all Nation
 
 There are 2 primary data models that are serving our application: the user model, which allows for oauth functionality, and the park model, which allows for the display/creation and manipulation of parks.
 
+This app is curently being deployed via Heroku: https://national-park-tracker-app.herokuapp.com/ 
+
 # Next Steps
 While a great start, this application has functionality and modifications that still need to be made. 
 
