@@ -57,7 +57,7 @@ a {
 .home-image {
   margin-left: auto; 
   margin-right: auto;
-  opacity: 0.7;
+  opacity: 0.9;
   width: 150vh;
   height: 80vh;
   border: solid black 5px;
@@ -98,7 +98,7 @@ a {
 
 .about-text {
   position: absolute;
-  top: 40%;
+  top: 60%;
   /* left: 15%; */
   text-align: center;
   font-family: NationalPark-Regular, sans-serif;
@@ -112,7 +112,7 @@ a {
 .about-img {
   margin-left: auto; 
   margin-right: auto;
-  opacity: 0.7;
+  opacity: 0.90;
   width: 150vh;
   height: 80vh;
   border: solid black 5px;
@@ -179,6 +179,8 @@ font-family: NationalPark-Heavy, sans-serif;
 }
 
 .card-img-wrapper {
+  /* width: 500px;
+  height: 400px; */
 }
 
 .card-img-wrapper img {
