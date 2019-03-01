@@ -12,28 +12,28 @@
     <title>National Park Tracker</title>
   </head>
   <ul class="nav">
-    <li class="nav-item logo">
+    <li class="nav-item">
         <img class="nps-logo" src="../images/NPS_Logo.png" alt="NPS Logo" >
     </li>
-    <li class="nav-item about">
-        <a class="nav-link about" href="../">Home</a>
+    <li class="nav-item">
+        <a class="nav-link" href="../">Home</a>
       </li>
-    <li class="nav-item about">
-      <a class="nav-link about" href="../about">About</a>
+    <li class="nav-item">
+      <a class="nav-link" href="../about">About</a>
     </li>
-    <li class="nav-item allParks">
-      <a class="nav-link allParks" href="../allParks">View all National Parks</a>
+    <li class="nav-item">
+      <a class="nav-link" href="../allParks">View all National Parks</a>
     </li>
     <% if (user) { %>
-      <li class="nav-item myProfile">
-          <a class="nav-link myProfile" href="../users/index">myProfile</a>
+      <li class="nav-item">
+          <a class="nav-link" href="../users/index">myProfile</a>
         </li>
     <% } %>
-    <li>
+    <li class="nav-item">
     <% if (user) { %>
-      <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+      <a href="/logout" class="nav-link"><i class="material-icons left">trending_flat</i>Log Out</a>
     <% } else { %>
-      <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+      <a href="/auth/google" class="nav-link"><i class="material-icons left">vpn_key</i>Login with Google</a>
     <% } %>
     </li>
   </ul>
