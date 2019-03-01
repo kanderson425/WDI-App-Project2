@@ -8,7 +8,8 @@ module.exports = {
    createPark,
    visitedPark,
    wishedPark,
-   deletePark
+   deleteVisitedPark,
+   deleteWishedPark,
 };
 
 function createPark(req, res) {
@@ -114,7 +115,7 @@ function wishedPark(req, res) {
 }   
   
 
-function deletePark(req, res) {
+function deleteVisitedPark(req, res) {
     req.user.parksVisited.map( (park, idx) => {
       // console.log(park._id);
       if (park._id.toString() === req.params.id) {
@@ -131,4 +132,23 @@ function deletePark(req, res) {
     // console.log(req.user.parksVisited[req.params.id]);
     // console.log(req.user.parksVisited)
     // req.user.parksVisited.splice(parseInt(req.params.id));
+};
+
+function deleteWishedPark(req, res) {
+  req.user.parksWished.map( (park, idx) => {
+    // console.log(park._id);
+    if (park._id.toString() === req.params.id) {
+      console.log("found park", park._id);
+      console.log(req.params.id, "req.params.id");
+      req.user.parksWished.splice(idx, 1)
+    }
+  }); 
+
+  req.user.save();
+  // console.log("Attempt to remove");
+  // console.log(req.params.id);
+  res.redirect('/users/index');
+  // console.log(req.user.parksVisited[req.params.id]);
+  // console.log(req.user.parksVisited)
+  // req.user.parksVisited.splice(parseInt(req.params.id));
 };
