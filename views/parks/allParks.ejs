@@ -10,6 +10,9 @@
                 <div class="image-title"><%= parkData.data[i].fullName %></div>
                 <img src="<%= parkData.data[i].images[0].url %>" width="300" height="200">
                 <a class="more-info-btn" target="_blank" href=" <%= parkData.data[i].url %>">More Info</a>
+                <!-- Add if functionality to remove visited/wish buttons -->
+                <% if (user) { %>
+                  
                 <form method="POST" action="/users/index/visitedParks">
                   <input type="hidden"  name="name" value="<%= parkData.data[i].fullName %>">
                   <input type="hidden"  name="description" value="<%= parkData.data[i].description %>">
@@ -30,6 +33,7 @@
                   <input type="hidden"  name="comment" value="<%= parkData.data[i].comment %>">
                   <button type='submit' class="add-wish-park-btn" >Wish List</button>
                 </form>
+                <% } %>
               </div>
             </div>
           <% } %>

@@ -83,11 +83,10 @@ function getOnePark(req, res) {
 }    
 
 function visitedPark(req, res) {
-  // if (req.user) {
+  // if (req.user.parksVisited) {
     let newPark = Park.create(req.body);
-
+   
     newPark.then((item) => {
-      // console.log(req.user, 5678908765456789)
       req.user.parksVisited.push(item);
       req.user.save();
       console.log(req.user);
@@ -96,7 +95,7 @@ function visitedPark(req, res) {
       console.log(err);
     })
   // } else {
-  //   res.redirect('views/errorPage');
+  //   res.redirect('users/index');
   // }
 }  
 
