@@ -283,8 +283,10 @@ font-family: NationalPark-Heavy, sans-serif;
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  margin-left: auto;
+  margin-left: 12%;
+  margin-top: 2%;
   margin-right: auto;
+
 }
 
 .park-image{
@@ -300,10 +302,12 @@ font-family: NationalPark-Heavy, sans-serif;
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 4px;
 }
+
 .park-image .image-title {
   position: absolute;
-  top: 4%;
+  top: 8%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: black;
@@ -311,6 +315,7 @@ font-family: NationalPark-Heavy, sans-serif;
   font-size: 15px;
   font-family: NationalPark-Heavy, sans-serif;
   width: 90%;
+  border-radius: 4px;
 }
 
 .park-image .more-info-btn {
